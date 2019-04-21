@@ -97,7 +97,7 @@
 
 <font color="#9932CC" size="3" face="黑体"><strong>3.域名</strong></font>
 
-<font color="#9932CC" size="3" face="黑体"><strong>4.证书</strong></font><br><br><br><br><br><font size="5" face="黑体">7.配置文件</font><br><br>配置域名server_name，2个ssl的证书栏，但是证书栏应该怎么配呢？其实就是2个证书的连接的地址，怎么配就不多讲了，(ln -s建立软连接或者绝对路径，一般在cert里面建立软连接，随便你们)。嗖，嗖，嗖，别忘记了nginx需要监听的端口，和转发的端口（ip随意）。<br>软连接建立如下图：<br><br>命令：<font color="#9932CC" size="3" face="黑体"><strong>n -s /ar….. h5jrmj…</strong></font>
+<font color="#9932CC" size="3" face="黑体"><strong>4.证书</strong></font><br><br><br><font size="5" face="黑体">7.配置文件</font><br><br>配置域名server_name，2个ssl的证书栏，但是证书栏应该怎么配呢？其实就是2个证书的连接的地址，怎么配就不多讲了，(ln -s建立软连接或者绝对路径，一般在cert里面建立软连接，随便你们)。嗖，嗖，嗖，别忘记了nginx需要监听的端口，和转发的端口（ip随意）。<br>软连接建立如下图：<br><br>命令：<font color="#9932CC" size="3" face="黑体"><strong>n -s /ar….. h5jrmj…</strong></font>
 
 <p><font size="5" face="黑体">8.配置完成，重启<font color="#9932CC" size="5" face="黑体"><strong>nginx。service nginx restart</strong></font>  !!!!!（别忘了，游戏服还需要配置证书哦</font><br></p>
 <p><font size="5" face="黑体">9.启动游戏服的链接服的进程。</font><br></p>

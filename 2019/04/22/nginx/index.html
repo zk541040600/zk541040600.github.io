@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="2019.4.22：由于需求，需要将connect连接的逻辑修改为最新的逻辑，即利用nginx反响代理。为什么要这样呢？因为我们以前的那套逻辑在一次微信api更新后有的用户进不去了。 步骤我在这里全部用紫色表示 nginx是什么？一个web服务器，通过http协议提供各种网络的服务，可以作为反向代理进行负载均衡的处理（消息通过nginx按照一定的策略转发给不同的服务器） 反向代理和正向代理：正向代">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-21T18:18:49.349Z">
+<meta property="og:updated_time" content="2019-04-21T18:19:48.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx">
 <meta name="twitter:description" content="2019.4.22：由于需求，需要将connect连接的逻辑修改为最新的逻辑，即利用nginx反响代理。为什么要这样呢？因为我们以前的那套逻辑在一次微信api更新后有的用户进不去了。 步骤我在这里全部用紫色表示 nginx是什么？一个web服务器，通过http协议提供各种网络的服务，可以作为反向代理进行负载均衡的处理（消息通过nginx按照一定的策略转发给不同的服务器） 反向代理和正向代理：正向代">
@@ -99,7 +99,7 @@
 
 <font color="#9932CC" size="3" face="黑体"><strong>3.域名</strong></font>
 
-<font color="#9932CC" size="3" face="黑体"><strong>4.证书</strong></font><br><br><br><br><br><font size="5" face="黑体">7.配置文件</font><br><br>配置域名server_name，2个ssl的证书栏，但是证书栏应该怎么配呢？其实就是2个证书的连接的地址，怎么配就不多讲了，(ln -s建立软连接或者绝对路径，一般在cert里面建立软连接，随便你们)。嗖，嗖，嗖，别忘记了nginx需要监听的端口，和转发的端口（ip随意）。<br>软连接建立如下图：<br><br>命令：<font color="#9932CC" size="3" face="黑体"><strong>n -s /ar….. h5jrmj…</strong></font>
+<font color="#9932CC" size="3" face="黑体"><strong>4.证书</strong></font><br><br><br><font size="5" face="黑体">7.配置文件</font><br><br>配置域名server_name，2个ssl的证书栏，但是证书栏应该怎么配呢？其实就是2个证书的连接的地址，怎么配就不多讲了，(ln -s建立软连接或者绝对路径，一般在cert里面建立软连接，随便你们)。嗖，嗖，嗖，别忘记了nginx需要监听的端口，和转发的端口（ip随意）。<br>软连接建立如下图：<br><br>命令：<font color="#9932CC" size="3" face="黑体"><strong>n -s /ar….. h5jrmj…</strong></font>
 
 <p><font size="5" face="黑体">8.配置完成，重启<font color="#9932CC" size="5" face="黑体"><strong>nginx。service nginx restart</strong></font>  !!!!!（别忘了，游戏服还需要配置证书哦</font><br></p>
 <p><font size="5" face="黑体">9.启动游戏服的链接服的进程。</font><br></p>
